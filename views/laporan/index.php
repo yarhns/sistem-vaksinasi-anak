@@ -22,8 +22,8 @@ $filter_bulan = $_GET['bulan'] ?? '';
 $filter_kecamatan = $_GET['kecamatan'] ?? '';
 $filter_vaksin = $_GET['vaksin'] ?? '';
 $filter_jenis_kelamin = $_GET['jenis_kelamin'] ?? '';
-$filter_usia_min = $_GET['usia_min'] !== '' ? (int)$_GET['usia_min'] : null;
-$filter_usia_max = $_GET['usia_max'] !== '' ? (int)$_GET['usia_max'] : null;
+$filter_usia_min = (isset($_GET['usia_min']) && $_GET['usia_min'] !== '') ? (int)$_GET['usia_min'] : null;
+$filter_usia_max = (isset($_GET['usia_max']) && $_GET['usia_max'] !== '') ? (int)$_GET['usia_max'] : null;
 $filter_petugas = $_GET['petugas'] ?? '';
 $export = $_GET['export'] ?? '';
 

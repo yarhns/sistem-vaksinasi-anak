@@ -66,6 +66,7 @@ Pastikan perangkat telah memiliki:
 - PHP 8.x.
 - MySQL atau MariaDB.
 - XAMPP.
+<<<<<<< HEAD
 - Browser seperti Google Chrome atau Mozilla Firefox.
 
 ### Langkah Instalasi
@@ -155,3 +156,5 @@ Berikut kredensial akun administrator bawaan:
 - Repository: [Sistem Informasi Vaksinasi Anak](https://github.com/yarhns/sistem-vaksinasi-anak)
 
 ---
+=======
+>>>>>>> 9f474ac (docs: menambahkan screenshot dan memperbarui README)
