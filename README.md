@@ -66,3 +66,92 @@ Pastikan perangkat telah memiliki:
 - PHP 8.x.
 - MySQL atau MariaDB.
 - XAMPP.
+- Browser seperti Google Chrome atau Mozilla Firefox.
+
+### Langkah Instalasi
+
+**1. Clone Repository**
+
+Buka terminal atau PowerShell, kemudian jalankan perintah berikut:
+
+```bash
+git clone https://github.com/yarhns/sistem-vaksinasi-anak.git
+```
+
+**2. Pindahkan Folder Project**
+
+Pastikan folder proyek berada di direktori server lokal XAMPP:
+
+```text
+C:\xampp\htdocs\
+```
+
+Struktur direktori proyek menjadi:
+
+```text
+C:\xampp\htdocs\sistem-vaksinasi-anak\
+```
+
+**3. Konfigurasi Database**
+
+Duplikasi file konfigurasi database:
+
+```text
+config/database.example.php
+```
+
+Kemudian ubah nama salinannya menjadi:
+
+```text
+config/database.local.php
+```
+
+Sesuaikan konfigurasi username dan password MySQL dengan pengaturan lokal Anda.
+
+Pastikan file konfigurasi lokal tidak ikut diunggah ke repository publik karena dapat berisi informasi sensitif.
+
+**4. Import Database**
+
+Lakukan import database melalui phpMyAdmin:
+
+1. Buka XAMPP Control Panel.
+2. Jalankan Apache dan MySQL.
+3. Buka browser dan akses `http://localhost/phpmyadmin`.
+4. Buat database baru dengan nama `vaksinasi_anak`.
+5. Pilih database tersebut.
+6. Import file `database/schema.sql` terlebih dahulu.
+7. Setelah berhasil, import file `database/seed.sql`.
+8. Pastikan proses import selesai tanpa kesalahan.
+
+**5. Jalankan Aplikasi**
+
+Buka browser dan akses alamat berikut:
+
+```text
+http://localhost/sistem-vaksinasi
+```
+
+Aplikasi Sistem Informasi Vaksinasi Anak siap dijalankan.
+
+## 🔑 Akun Default
+
+Berikut kredensial akun administrator bawaan:
+
+| Informasi | Detail |
+|---|---|
+| Username | `admin` |
+| Password | `admin123` |
+| Hak Akses | Admin |
+
+> **Catatan Keamanan:** Akun di atas merupakan kredensial default yang disediakan untuk keperluan pengujian. Segera ganti password setelah login pertama, terutama jika aplikasi digunakan pada lingkungan publik atau produksi.
+
+## 👨‍💻 Pengembang
+
+**Dear Haens**
+
+*Web Developer Enthusiast*
+
+- GitHub: [@yarhns](https://github.com/yarhns)
+- Repository: [Sistem Informasi Vaksinasi Anak](https://github.com/yarhns/sistem-vaksinasi-anak)
+
+---
