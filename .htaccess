@@ -1,0 +1,36 @@
+RewriteEngine On
+RewriteBase /sistem-vaksinasi/
+
+# ===== Proteksi file sensitif =====
+<FilesMatch "\.(sql|log|md|env|ini|lock|json|yml|yaml|local\.php)$">
+    Require all denied
+</FilesMatch>
+
+# Blokir dotfile
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Blokir file konfigurasi & debug di root
+<FilesMatch "^(database\.sql|debug_user\.php|reset_admin\.php|test_vaksinasi\.php)$">
+    Require all denied
+</FilesMatch>
+
+# ===== Directory listing off =====
+Options -Indexes
+
+# ===== Front controller routing =====
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# ===== Error documents =====
+ErrorDocument 404 /sistem-vaksinasi/index.php
+ErrorDocument 403 /sistem-vaksinasi/index.php
+
+# ===== Security headers dasar =====
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

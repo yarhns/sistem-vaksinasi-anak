@@ -1,0 +1,25 @@
+# Config lokal (JANGAN di-commit)
+config/database.local.php
+config/local.php
+.env
+
+# Logs
+logs/
+*.log
+
+# File database pribadi
+*.sql
+!database/schema.sql
+!database/seed.sql
+
+# File debug/sampah
+test_login.php
+reset.php
+reset_admin.php
+seed_data.php
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
